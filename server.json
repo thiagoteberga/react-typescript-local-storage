@@ -1,0 +1,32 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "photo": "https://www.uniir.com.br/wp-content/uploads/2021/03/uniir-aluguel-de-celular-aparelho-iphone-12.png",
+            "name": "iPhone",
+            "description": "iPhone da marca Apple",
+            "price": 5000
+        },
+        {
+            "id": 2,
+            "photo": "https://tecnoblog.net/wp-content/uploads/2020/11/galaxy-s10-plus-produto.png",
+            "name": "S10",
+            "description": "s10 da marca Samsung",
+            "price": 5000
+        },
+        {
+            "id": 3,
+            "photo": "https://brmotorolanew.vteximg.com.br/arquivos/ids/157347-1000-1000/Smartphone-Moto-G10-64-GB-foto-01.png",
+            "name": "Moto G",
+            "description": "Moto G da marca Motorola",
+            "price": 5000
+        },
+        {
+            "id": 4,
+            "photo": "https://www.kabum.com.br/conteudo/descricao/133014/img/zenfoneheader.png",
+            "name": "Zenfone 7",
+            "description": "Zenfone 7 da marca ASUS",
+            "price": 5000
+        }
+]
+}
