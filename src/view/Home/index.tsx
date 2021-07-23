@@ -26,31 +26,23 @@ const Home: React.FC = () => {
     )
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem(`@cart`, JSON.stringify(cart));
+  }, [cart]);
+
 
   const handleCart = ( index: number ) => {
-    //let product = data[index]
-    //let push: any = [...cart, cart.push(product)]
-    //setCart(push);
-    //console.log(JSON.stringify(cart));
-    //
+
+    // Retrieve the object from storage
+    //let retrievedObject: any = localStorage.getItem('@cart') || '[]';
+    //console.log('recuperado:' + retrievedObject);
+    let product = data[index]
+    //console.log('data:' + JSON.stringify(product));
+    setCart(cart => [...cart,product]);
+    //console.log('cart:' + JSON.stringify(cart)); //Sai zerado
+    
     //const productStorage = JSON.stringify(cart); //Converte JSON para String
-    //localStorage.setItem(`@cart`, productStorage); //Insere a String
-
-      
-
-      // Retrieve the object from storage
-      let retrievedObject: any = localStorage.getItem('@cart') || '[]';
-      console.log('recuperado:' + retrievedObject);
-   
-      let product = data[index]
-      console.log('data:' + JSON.stringify(product));
-
-      setCart(cart => [...cart,product]);
-      
-      console.log('cart:' + JSON.stringify(cart)); //Sai zerado
-  
-      const productStorage = JSON.stringify(cart); //Converte JSON para String
-      localStorage.setItem(`@cart`, productStorage); //Insere o Json no Local
+    //localStorage.setItem(`@cart`, productStorage); //Insere o Json no Local
   }
 
   return (
