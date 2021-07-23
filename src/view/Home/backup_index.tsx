@@ -24,34 +24,18 @@ const Home: React.FC = () => {
         setData(response.data)
       }
     )
-  }, []);
+  }, [])
 
+ 
 
-  const handleCart = ( index: number ) => {
-    //let product = data[index]
-    //let push: any = [...cart, cart.push(product)]
-    //setCart(push);
-    //console.log(JSON.stringify(cart));
-    //
-    //const productStorage = JSON.stringify(cart); //Converte JSON para String
-    //localStorage.setItem(`@cart`, productStorage); //Insere a String
-
-      
-
-      // Retrieve the object from storage
-      let retrievedObject: any = localStorage.getItem('@cart') || '[]';
-      console.log('recuperado:' + retrievedObject);
-   
-      let product = data[index]
-      console.log('data:' + JSON.stringify(product));
-
-      setCart(cart => [...cart,product]);
-      
-      console.log('cart:' + JSON.stringify(cart)); //Sai zerado
-  
-      const productStorage = JSON.stringify(cart); //Converte JSON para String
-      localStorage.setItem(`@cart`, productStorage); //Insere o Json no Local
+  const handleCart = (index: number) => {
+    let product = data[index]
+    let push: any = [...cart, cart.push(product)]
+    setCart(push)
+    const productStore = JSON.stringify(cart);
+    localStorage.setItem('@cart', productStore)
   }
+
 
   return (
     <Container>
