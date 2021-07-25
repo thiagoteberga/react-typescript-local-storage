@@ -116,7 +116,6 @@ const smartwatch = data.filter((data) => {
         <S.TextoCabecalhoA>Smartwatches</S.TextoCabecalhoA>
       </S.Title>
       <S.HomeContainer>
-
               {
               
               smartwatch.map( (prod, index) => (

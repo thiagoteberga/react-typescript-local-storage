@@ -25,3 +25,8 @@ Para iniciar o servidor e rodar a página:
 
 
 Veja o projeto online [clicando aqui](https://red-store-teberga.netlify.app/)
+
+Veja o repositório do GIT criado para hospedar o JSON da Fake API [clicando aqui](https://github.com/thiagoteberga/fake-api)
+
+Veja o JSON utilizado [clicando aqui](https://my-json-server.typicode.com/thiagoteberga/fake-api)
+
