@@ -182,35 +182,6 @@ export const HomeSectionTwo = styled.section`
     align-items: center;
     background-image: url(${backgroundTwo})
     `;
-
- export const CardTwo = styled.div`
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    text-align: center;
-    padding: 20px;
-    margin: 25px;
-    border-radius: 15px; /* 5px rounded corners */
-    background-color: white;
-    width: 400px;
-    height: 500px;
-
-    &:hover{
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-
-    @media (max-width: 600px){    
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        text-align: center;
-        padding: 20px;
-        margin: 25px;
-        border-radius: 15px; /* 5px rounded corners */
-        background-color: white;
-        width: 200px;
-        height: 300px;
-    }
-    `;
-
    
 
 export const HomeSectionThree = styled.section`
@@ -351,19 +322,4 @@ export const Paragrafo = styled.p`
         color: white;
         text-shadow: 2px 2px 4px #000000;
     }
-    `;
-
-export const Content = styled.div`
-    width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    `;
-
-
-export const ErrorMsg = styled.span`
-    display: block;
-    color: red;
-    font-weight: 600;
-    margin-top: 1rem;
     `;

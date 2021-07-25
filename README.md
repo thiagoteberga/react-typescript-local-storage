@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+# Gama Academy
+## Hiring Coders - Desafio 2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Thiago Oliveira Teberga
+## Desafio #2: Gestão de Cadastros
+Criação de um sistema e-commerce para inventário de produtos e dados de clientes.
 
-## Available Scripts
+## Sobre o projeto:
+- Foi criado um arquivo JSON contendo 8 objetos, entre eles smartphones e smartwatches, eles são identificados pelo atributo "type". Em tela foram criados 3 sections, a primeira faz o filter dos Smartphones, a segunda faz o filter dos Smartwatches e a terceira permite que o usuário preencha um formulário com os seus dados para que ele utilize o seu dispositivo atual como parte do pagamento no momento da compra.
+- Ao clicar em "Adicionar ao Carrinho" um item é adicionado no Array "@cart" e ao preencher o email um objeto é inserido dentro do Array "@cliente".
 
-In the project directory, you can run:
+## Comando utilizados no desenvolvimento:
 
-### `npm start`
+Para iniciar um projeto em React:
+`npx create-react-app vtex --template=typescript`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para instalar as dependências do Projeto:
+`npm install axios`
+`npm install styled-components`
+`npm add json-server -D`
+`npm add @types/styled-components -D`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Para iniciar o servidor e rodar a página:
+`npm start`
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Veja o projeto online [clicando aqui](https://red-store-teberga.netlify.app/)
