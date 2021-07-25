@@ -13,9 +13,22 @@ interface IProduct {
   type: string;
 }
 
+interface IClient {
+  nome:string;
+  email: string;
+  celular: string;
+  descricao: string;
+}
+
 const Home: React.FC = () => {
   const [ data, setData ] = useState<IProduct[]>([]);
   const [ cart, setCart ] = useState<IProduct[]>([]);
+  const [ cliente, setCliente ] = useState<IClient[]>([]);
+  
+  let [ nome, setNome ] = useState('');
+  let [ email, setEmail ] = useState('');
+  let [ celular, setCelular ] = useState('');
+  let [ descricao, setDescricao ] = useState('');
 
 
 
@@ -27,33 +40,44 @@ const Home: React.FC = () => {
     )
   }, []);
 
+
   useEffect(() => {
     localStorage.setItem(`@cart`, JSON.stringify(cart));
   }, [cart]);
 
-
   const handleCart = ( index: number ) => {
-
-    // Retrieve the object from storage
-    //let retrievedObject: any = localStorage.getItem('@cart') || '[]';
-    //console.log('recuperado:' + retrievedObject);
     let product = data[index]
-    //console.log('data:' + JSON.stringify(product));
     setCart(cart => [...cart,product]);
-    //console.log('cart:' + JSON.stringify(cart)); //Sai zerado
-    
-    //const productStorage = JSON.stringify(cart); //Converte JSON para String
-    //localStorage.setItem(`@cart`, productStorage); //Insere o Json no Local
   };
 
 
-  const smartphone = data.filter((data) => {
-    return  data.type === "Smartphone";
-  })
 
-  const smartwatch = data.filter((data) => {
-    return  data.type === "Smartwatch";
-  })
+  useEffect(() => {
+    localStorage.setItem(`@cliente`, JSON.stringify(cliente));
+  }, [cliente]);
+
+  function handleCadastra() {
+    localStorage.setItem('nome',JSON.stringify(nome));
+    localStorage.setItem('email',JSON.stringify(email));
+    localStorage.setItem('celular',JSON.stringify(celular));
+    localStorage.setItem('descricao',JSON.stringify(descricao));
+
+    let newCliente = JSON.parse(`{"nome": "`+nome+`","email":"`+email+`","celular":"`+celular+`","descricao":"`+descricao+`"}`);
+    setCliente(cliente => [...cliente,newCliente]);
+    //localStorage.setItem('cliente',`{"nome": "`+nome+`","email":"`+email+`","celular":"`+celular+`","descricao":"`+descricao+`"}`);
+
+    alert('Cliente cadastrado com sucesso!');
+
+}
+
+
+const smartphone = data.filter((data) => {
+  return  data.type === "Smartphone";
+})
+
+const smartwatch = data.filter((data) => {
+  return  data.type === "Smartwatch";
+})
 
 
   return (
@@ -111,26 +135,25 @@ const Home: React.FC = () => {
       <S.HomeContainerThree>
         <S.Card>
           <S.H4>
-            Você tem algum Smartphone ou Smartwatch e gostaria de utiliza-lo com parte do pagamento?
+            Você tem algum Smartphone ou Smartwatch e gostaria de utilizá-lo como parte do pagamento?
           </S.H4>
           <S.H4>
             Informe aqui os seus dados que em breve <u>entraremos em contato</u>: 
           </S.H4>
           <S.CardContainer>
-          <S.Input className="nome" type="text" placeholder="Nome" />
-          <S.Input className="email" type="email" placeholder="Email" />
-          <S.Input className="telefone" type="text" placeholder="Celular" />
-          <S.Input className="descricao" type="text" placeholder="Escreve aqui uma vreve descrição sobre o dispositivo" />
-          <S.Button type="button">Cadastrar</S.Button>
+          <S.Input className="nome" id="nome" type="text" placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)}/>
+          <S.Input className="email" id="email" type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+          <S.Input className="celular" id="celular" type="text" placeholder="Celular" value={celular} onChange={e => setCelular(e.target.value)}/>
+          <S.Input className="descricao" id="descricao" type="text" placeholder="Escreva aqui uma breve descrição sobre o dispositivo" value={descricao} onChange={e => setDescricao(e.target.value)}/>
+          <S.Button type="button" onClick={handleCadastra}>Cadastrar</S.Button>
           </S.CardContainer>
         </S.Card>
       </S.HomeContainerThree>
-
-
     </S.HomeSectionThree>
+
     <S.HomeFooter>
         <S.Paragrafo>
-        Desenvolvido por <b><a href="https://github.com/thiagoteberga/landing-page-english-course">Thiago Teberga</a></b> - Hiring Coders
+        Desenvolvido por <b><a href="https://github.com/thiagoteberga/react-typescript-local-storage">Thiago Teberga</a></b> - Hiring Coders
         <br/>
         Todos os direitos reservados.
         </S.Paragrafo>
