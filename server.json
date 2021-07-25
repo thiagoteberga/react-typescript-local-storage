@@ -5,28 +5,64 @@
             "photo": "https://www.uniir.com.br/wp-content/uploads/2021/03/uniir-aluguel-de-celular-aparelho-iphone-12.png",
             "name": "iPhone",
             "description": "iPhone da marca Apple",
-            "price": 5000
+            "price": 1000,
+            "type": "Smartphone"
         },
         {
             "id": 2,
             "photo": "https://tecnoblog.net/wp-content/uploads/2020/11/galaxy-s10-plus-produto.png",
             "name": "S10",
             "description": "s10 da marca Samsung",
-            "price": 5000
+            "price": 2000,
+            "type": "Smartphone"
         },
         {
             "id": 3,
             "photo": "https://brmotorolanew.vteximg.com.br/arquivos/ids/157347-1000-1000/Smartphone-Moto-G10-64-GB-foto-01.png",
             "name": "Moto G",
             "description": "Moto G da marca Motorola",
-            "price": 5000
+            "price": 3000,
+            "type": "Smartphone"
         },
         {
             "id": 4,
             "photo": "https://www.kabum.com.br/conteudo/descricao/133014/img/zenfoneheader.png",
             "name": "Zenfone 7",
             "description": "Zenfone 7 da marca ASUS",
-            "price": 5000
+            "price": 4000,
+            "type": "Smartphone"
+        },
+        {
+            "id": 5,
+            "photo": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTP62_VW_34FR+watch-40-alum-spacegray-nc-se_VW_34FR_WF_CO?wid=1400&hei=1400&trim=1,0&fmt=p-jpg&qlt=95&.v=1566449863965,1617299155000",
+            "name": "Apple Watch Serie 6",
+            "description": "GPS 44MM Space Gray",
+            "price":5000,
+            "type": "Smartwatch"
+        },
+        {
+            "id": 6,
+            "photo": "http://d2r9epyceweg5n.cloudfront.net/stores/001/233/733/products/relogio-smartwatch-xiaomi-amazfit-gtr-42mm-47mm-a1902-globalgarantia-marrom1-4c6fe59bc55351ab1d15944902276751-640-0.png",
+            "name": "Amazfit GTR",
+            "description": "Smartwatch da Xiaomi",
+            "price": 6000,
+            "type": "Smartwatch"
+        },
+        {
+            "id": 7,
+            "photo": "https://gloimg.gbtcdn.com/images/pdm-product-pic/Electronic/2020/07/28/source-img/20200728093033_5f1f7fb984afb.jpg",
+            "name": "Zeblaze NEO 3",
+            "description": "IP68 - 20 Dias de Bateria",
+            "price": 7000,
+            "type": "Smartwatch"
+        },
+        {
+            "id": 8,
+            "photo": "https://www.pontofrio-imagens.com.br/Control/ArquivoExibir.aspx?IdArquivo=1416847750",
+            "name": "Samsung Galaxy Watch3",
+            "description": "Tela Super AMOLED",
+            "price": 8000,
+            "type": "Smartwatch"
         }
 ]
 }
